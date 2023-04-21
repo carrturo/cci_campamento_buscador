@@ -16,6 +16,7 @@ df = pd.read_csv(url, dtype=str).fillna("")
 
 # Use a text_input to get the keywords to filter the dataframe
 text_search = st.text_input("Search", value="")
+text_search = text_search.upper()
 
 # Filter the dataframe using masks
 m1 = df["Nombre Completo - Registro"].str.contains(text_search)
