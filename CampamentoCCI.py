@@ -43,7 +43,7 @@ if text_search:
                 st.markdown(f"**{row['Fecha de Pago - Registro']}**")
                 st.markdown(f"**{row['Metodo de Pago - Registro']}**")
                 st.markdown("Lps. " + f"**{row['¿De cuanto es el abono inicial?']}**")
-                st.markdown(f"**{row['Número de Recibo de Pago - Registro']}**")
+                st.markdown("Recibo # " + f"**{row['Número de Recibo de Pago - Registro']}**")
             if len(f"{row['Nombre Completo - Abono'].strip()}") != 0 :
                 st.caption(f"Abono")
                 st.markdown(f"**{row['Nombre Completo - Abono'].strip()}**")
@@ -51,4 +51,4 @@ if text_search:
                 st.markdown(f"**{row['Fecha de Pago - Abono']}**")
                 st.markdown(f"**{row['Metodo de Pago - Abono']}**")
                 st.markdown("Lps. " + f"**{row['¿De cuanto es el abono? - Abono']}**")
-                st.markdown(f"**{row['Número de Recibo de Pago - Abono']}**")
+                st.markdown("Recibo # " + f"**{row['Número de Recibo de Pago - Abono']}**")
