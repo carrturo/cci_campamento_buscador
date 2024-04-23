@@ -7,7 +7,7 @@ st.set_page_config(page_title="Campamento Juvenil CCI 2023", page_icon="🐍", l
 st.title("Campamento Juvenil CCI 2023")
 
 # Connect to the Google Sheet
-sheet_id = "1sJhbWrXLmZ1pLoPHi4Pl3W3wQSLxZGXhy-hL_kXoUY4"
+sheet_id = "1wvbS-5IYJOEtoww-4PnC-uJDCe6NIvhCrlrMEvc5VDM"
 sheet_name = "Respuestas"
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 df = pd.read_csv(url, dtype=str).fillna("")
@@ -42,7 +42,7 @@ if text_search:
                 st.markdown(f"*{row['Identidad - Registro'].strip()}*")
                 st.markdown(f"**{row['Fecha de Pago - Registro']}**")
                 st.markdown(f"**{row['Metodo de Pago - Registro']}**")
-                st.markdown("Lps. " + f"**{row['¿De cuanto es el abono inicial?']}**")
+                st.markdown("Lps. " + f"**{row['Monto - Registro']}**")
                 st.markdown("Recibo # " + f"**{row['Número de Recibo de Pago - Registro']}**")
             if len(f"{row['Nombre Completo - Abono'].strip()}") != 0 :
                 st.caption(f"Abono")
@@ -50,5 +50,5 @@ if text_search:
                 st.markdown(f"*{row['Identidad - Abono'].strip()}*")
                 st.markdown(f"**{row['Fecha de Pago - Abono']}**")
                 st.markdown(f"**{row['Metodo de Pago - Abono']}**")
-                st.markdown("Lps. " + f"**{row['¿De cuanto es el abono? - Abono']}**")
+                st.markdown("Lps. " + f"**{row['Monto - Abono']}**")
                 st.markdown("Recibo # " + f"**{row['Número de Recibo de Pago - Abono']}**")
