@@ -3,8 +3,8 @@ import streamlit as st
 import pandas as pd
 
 # Page setup
-st.set_page_config(page_title="Campamento Juvenil CCI 2023", page_icon="🐍", layout="wide")
-st.title("Campamento Juvenil CCI 2023")
+st.set_page_config(page_title="Cena de Gala Conmemorativa 25 Aniversario", page_icon="🐍", layout="wide")
+st.title("Cena de Gala Conmemorativa 25 Aniversario")
 
 # Connect to the Google Sheet
 sheet_id = "1wvbS-5IYJOEtoww-4PnC-uJDCe6NIvhCrlrMEvc5VDM"
