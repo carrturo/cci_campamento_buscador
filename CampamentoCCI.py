@@ -8,11 +8,11 @@ st.title("CCI Cena de Gala Conmemorativa 25 Aniversario")
 
 # Connect to the Google Sheet
 sheet_id = "1syDzr3Xly7fl2XdzO3J38uZc8fgd_wi8-wOjp4a9Re0"
-sheet_name = "Respuestas de formulario 1"
+sheet_name = "Respuestas"
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 df = pd.read_csv(url, dtype=str).fillna("")
 
-# https://docs.google.com/spreadsheets/d/1sJhbWrXLmZ1pLoPHi4Pl3W3wQSLxZGXhy-hL_kXoUY4/edit?usp=sharing
+# https://docs.google.com/spreadsheets/d/1syDzr3Xly7fl2XdzO3J38uZc8fgd_wi8-wOjp4a9Re0/edit?usp=sharing
 
 # Use a text_input to get the keywords to filter the dataframe
 text_search = st.text_input("Search", value="")
