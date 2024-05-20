@@ -19,11 +19,10 @@ text_search = st.text_input("Search", value="")
 text_search = text_search.upper()
 
 # Filter the dataframe using masks
-m1 = df["Nombre Completo - Registro"].str.contains(text_search)
-m2 = df["Identidad - Registro"].str.contains(text_search)
-m3 = df["Nombre Completo - Abono"].str.contains(text_search)
-m4 = df["Identidad - Abono"].str.contains(text_search)
-df_search = df[m1 | m2 | m3 | m4]
+m1 = df["Nombre Completo"].str.contains(text_search)
+m2 = df["Identidad"].str.contains(text_search)
+m3 = df["Número de Teléfono"].str.contains(text_search)
+df_search = df[m1 | m2 | m3]
 
 # Another way to show the filtered results
 # Show the cards
@@ -36,19 +35,9 @@ if text_search:
             cols = st.columns(N_cards_per_row, gap="large")
         # draw the card
         with cols[n_row%N_cards_per_row]:
-            if len(f"{row['Nombre Completo - Registro'].strip()}") != 0 :
-                st.caption(f"Registro")
-                st.markdown(f"**{row['Nombre Completo - Registro'].strip()}**")
-                st.markdown(f"*{row['Identidad - Registro'].strip()}*")
-                st.markdown(f"**{row['Fecha de Pago - Registro']}**")
-                st.markdown(f"**{row['Metodo de Pago - Registro']}**")
-                st.markdown("Lps. " + f"**{row['Monto - Registro']}**")
-                st.markdown("Recibo # " + f"**{row['Número de Recibo de Pago - Registro']}**")
-            if len(f"{row['Nombre Completo - Abono'].strip()}") != 0 :
                 st.caption(f"Abono")
-                st.markdown(f"**{row['Nombre Completo - Abono'].strip()}**")
-                st.markdown(f"*{row['Identidad - Abono'].strip()}*")
-                st.markdown(f"**{row['Fecha de Pago - Abono']}**")
-                st.markdown(f"**{row['Metodo de Pago - Abono']}**")
-                st.markdown("Lps. " + f"**{row['Monto - Abono']}**")
-                st.markdown("Recibo # " + f"**{row['Número de Recibo de Pago - Abono']}**")
+                st.markdown(f"**{row['Nombre Completo'].strip()}**")
+                st.markdown(f"*{row['Identidad'].strip()}*")
+                st.markdown(f"*{row['Número de Teléfono'].strip()}*")
+                st.markdown(f"**{row['Metodo de Pago']}**")
+                st.markdown("Lps. " + f"**{row['Monto']}**")
