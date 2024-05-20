@@ -3,8 +3,8 @@ import streamlit as st
 import pandas as pd
 
 # Page setup
-st.set_page_config(page_title="Cena de Gala Conmemorativa 25 Aniversario", page_icon="🐍", layout="wide")
-st.title("CCI Cena de Gala Conmemorativa 25 Aniversario")
+st.set_page_config(page_title="Cena de Gala - 25 Aniversario CCI - Lc", page_icon="🐍", layout="wide")
+st.title("CCI Cena de Gala 25 Aniversario - Lista de Reserva")
 
 # Connect to the Google Sheet
 sheet_id = "1syDzr3Xly7fl2XdzO3J38uZc8fgd_wi8-wOjp4a9Re0"
