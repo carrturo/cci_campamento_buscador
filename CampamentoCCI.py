@@ -7,8 +7,8 @@ st.set_page_config(page_title="Cena de Gala Conmemorativa 25 Aniversario", page_
 st.title("CCI Cena de Gala Conmemorativa 25 Aniversario")
 
 # Connect to the Google Sheet
-sheet_id = "1wvbS-5IYJOEtoww-4PnC-uJDCe6NIvhCrlrMEvc5VDM"
-sheet_name = "Respuestas"
+sheet_id = "1syDzr3Xly7fl2XdzO3J38uZc8fgd_wi8-wOjp4a9Re0"
+sheet_name = "Respuestas de formulario 1"
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 df = pd.read_csv(url, dtype=str).fillna("")
 
