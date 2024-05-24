@@ -20,9 +20,8 @@ text_search = text_search.upper()
 
 # Filter the dataframe using masks
 m1 = df["Nombre Completo"].str.contains(text_search)
-m2 = df["Identidad"].str.contains(text_search)
-m3 = df["Número de Teléfono"].str.contains(text_search)
-df_search = df[m1 | m2 | m3]
+m2 = df["Número de Teléfono"].str.contains(text_search)
+df_search = df[m1 | m2 ]
 
 # Another way to show the filtered results
 # Show the cards
@@ -37,7 +36,6 @@ if text_search:
         with cols[n_row%N_cards_per_row]:
                 st.caption(f"Abono")
                 st.markdown(f"**{row['Nombre Completo'].strip()}**")
-                st.markdown(f"*{row['Identidad'].strip()}*")
                 st.markdown(f"*{row['Número de Teléfono'].strip()}*")
-                st.markdown(f"**{row['Metodo de Pago']}**")
-                st.markdown("Lps. " + f"**{row['Monto']}**")
+                st.markdown(f"*{row['Metodo de Pago']}*")
+                st.markdown("Lps. " + f"*{row['Monto']}*")
