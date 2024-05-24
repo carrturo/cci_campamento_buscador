@@ -21,7 +21,7 @@ text_search = text_search.upper()
 # Filter the dataframe using masks
 m1 = df["Nombre Completo"].str.contains(text_search)
 m2 = df["Número de Teléfono"].str.contains(text_search)
-df_search = df[m1 | m2 ]
+df_search = df[ m1 | m2 ]
 
 # Another way to show the filtered results
 # Show the cards
