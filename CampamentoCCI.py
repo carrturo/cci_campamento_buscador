@@ -7,12 +7,12 @@ st.set_page_config(page_title="Cena de Gala - 25 Aniversario CCI - Lc", page_ico
 st.title("CCI Cena de Gala 25 Aniversario - Lista de Reserva")
 
 # Connect to the Google Sheet
-sheet_id = "1syDzr3Xly7fl2XdzO3J38uZc8fgd_wi8-wOjp4a9Re0"
-sheet_name = "Respuestas"
+sheet_id = "1cUTge3u9q5YvasyWQwcmXGxqqn68-GKJlqT-usTI3zY"
+sheet_name = "Abonos"
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 df = pd.read_csv(url, dtype=str).fillna("")
 
-# https://docs.google.com/spreadsheets/d/1syDzr3Xly7fl2XdzO3J38uZc8fgd_wi8-wOjp4a9Re0/edit?usp=sharing
+# https://docs.google.com/spreadsheets/d/1cUTge3u9q5YvasyWQwcmXGxqqn68-GKJlqT-usTI3zY/edit?usp=sharing
 
 # Use a text_input to get the keywords to filter the dataframe
 text_search = st.text_input("Search", value="")
