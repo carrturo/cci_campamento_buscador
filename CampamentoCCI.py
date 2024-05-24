@@ -12,7 +12,7 @@ sheet_name = "Abonos"
 url = f"https://docs.google.com/spreadsheets/d/{sheet_id}/gviz/tq?tqx=out:csv&sheet={sheet_name}"
 df = pd.read_csv(url, dtype=str).fillna("")
 
-# https://docs.google.com/spreadsheets/d/1cUTge3u9q5YvasyWQwcmXGxqqn68-GKJlqT-usTI3zY/edit?usp=sharing
+# https://docs.google.com/spreadsheets/d/1cUTge3u9q5YvasyWQwcmXGxqqn68-GKJlqT-usTI3zY/edit?resourcekey#gid=699215609
 
 # Use a text_input to get the keywords to filter the dataframe
 text_search = st.text_input("Search", value="")
@@ -38,4 +38,5 @@ if text_search:
                 st.markdown(f"**{row['Nombre Completo'].strip()}**")
                 st.markdown(f"*{row['Número de Teléfono'].strip()}*")
                 st.markdown(f"*{row['Metodo de Pago']}*")
+                st.markdown(f"*{row['Celebración']}*")
                 st.markdown("Lps. " + f"*{row['Monto']}*")
